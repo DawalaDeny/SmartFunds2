@@ -1,0 +1,10 @@
+﻿@model Organization
+
+<tr>
+    <td>@Model.Name</td>
+    <td>@Model.Type</td>
+    <td>@Model.CompanyNumber</td>
+    <td>
+        <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    </td>
+</tr>

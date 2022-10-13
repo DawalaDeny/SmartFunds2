@@ -1,0 +1,22 @@
+﻿@model IList<Organization>
+
+<h1>Organizations</h1>
+
+<a asp-action="Create" class="btn btn-primary">Add new organization</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Company number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var organization in Model)
+    {
+        <partial name="RowPartial" model="organization"/>
+    }
+    </tbody>
+</table>
